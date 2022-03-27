@@ -1,0 +1,347 @@
+/* ========== Break Points =========== */
+
+/* ------ X-Large Devices (Lower than 1400px) ----- */
+@media (max-width: 1399.98px) {
+
+    /* Hero Section */
+    .home {
+        margin: 0;
+        height: 800px;
+        padding: 300px 0;
+        display: flex;
+        /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/ProfilePicture2.jpeg'); */
+        background: url("../assets/ProfilePicture.jpg"), #656C74;
+        background-position: 100% 10%;
+        /* background-size: 40%; */
+        background-size: 900px 1100px;	
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
+
+    .home h1 {
+        font-size: 90px;
+        font-weight: 400;
+        color: var(--color-secondary);
+    }
+
+    .home p {
+        font-size: 25px;
+        font-weight: 400;
+        color: var(--color-secondary);
+    }
+
+    /* About Section */
+    .about .tile .tile-description {
+        display: none;
+        font-size: 18px;
+        transition: all 0.5s ease-in;
+    }
+
+    /* Personal Projects Section */
+    .projects .projectThumbnail {
+        height: 175px;
+        width: 350px;
+    }
+    
+    .projects .projectTechList {
+        line-height: 30px;
+    }
+
+    .projects .projectTechList .projectTech {
+        font-size: 15px;
+    }
+
+}
+
+/* ------ Large Devices (Lower than 1200px) ----- */
+@media (max-width: 1199.98px) {
+
+    /* Navbar */
+    .cust-navbar .menu li a:hover {
+        color: var(--color-text-inverse);
+    }
+
+    /* Hero Section */
+    .home {
+        margin: 0;
+        height: 800px;
+        padding: 300px 0;
+        display: flex;
+        /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/ProfilePicture2.jpeg'); */
+        background: url("../assets/ProfilePicture.jpg"), #656C74;
+        background-position: right -200px top 10%;
+        /* background-size: 40%; */
+        background-size: 900px 1100px;	
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
+
+    /* About Section */
+    .about .tile .tile-title {
+        font-size: 18px;
+        /* font-weight: 700; */
+    }
+
+    .about .tile .tile-content {
+        font-size: 40px;
+        padding: 10px 0 5px 0;
+        /* color: var(--color-primary); */
+        font-weight: 700;
+    }
+
+    .about .tile .tile-description {
+        display: none;
+        font-size: 15px;
+        transition: all 0.5s ease-in;
+    }
+
+    /* Personal Projects Section */
+    .projects .projectItem {
+        margin: 0 0 20px 0;
+    }
+
+    .projects .projectThumbnail {
+        height: 200px;
+        width: 400px;
+    }
+    
+    .projects .projectTechList {
+        line-height: 40px;
+    }
+
+    .projects .projectTechList .projectTech {
+        font-size: 20px;
+    }
+}
+
+/* ------ Medium Devices (Lower than 992px) ----- */
+@media (max-width: 991.98px) {
+
+    /* Navbar */
+    
+    .cust-navbar .cust-navbar-main {
+        position: relative;
+    }
+
+    .cust-navbar .cust-navbar-icon {
+        display: inline-block;
+        margin-left: auto;
+    }
+
+    .cust-navbar .cust-navbar-icon .cust-navbar-icon-close {
+        display: none;
+    }
+
+    /* .cust-navbar .menu {
+        display: none;
+    } */
+
+    .cust-navbar .menu {
+        display: none;
+        /* display: block; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: unset;
+        margin-left: unset;
+        margin-right: unset;
+        height: 100%;
+        width: 350px;
+        padding: 70px 10px;
+        background-color: var(--color-primary);
+        z-index: 4;
+    }
+
+    .cust-navbar .menu.show-sidemenu {
+        display: block;
+    }
+
+    .cust-navbar .menu li {
+        margin: 30px;
+        font-size: 25px;
+        /* margin-left: 30px; */
+        list-style: none;
+        display: block;
+    }
+
+    .cust-navbar .menu li a {
+        color: var(--color-secondary);
+    }
+        
+    .cust-navbar .menu li a:hover {
+        color: var(--color-secondary);
+    }
+
+    .cust-navbar .menu li a.active, .cust-navbar .menu li a.active:hover {
+        color: var(--color-text-inverse);
+        border-bottom: 1px solid var(--color-text-inverse);
+        /* font-weight: 700; */
+    }
+
+    .cust-navbar .menu .side-menu-bottom {
+        display: block;
+        position: absolute;
+        /* right: 0; */
+        bottom: 0;
+        line-height: 40px;
+        /* margin-top: auto; */
+    }
+
+    .cust-navbar .menu .side-menu-bottom a {
+        padding: 10px;
+        transition: all 0.5s ease-in;
+    }
+
+    .cust-navbar .menu .side-menu-bottom a:focus {
+        color: var(--color-text-inverse)
+    }
+
+    /* Hero Section */
+    .home {
+        margin: 0;
+        height: 800px;
+        padding: 300px 0;
+        display: flex;
+        /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/ProfilePicture2.jpeg'); */
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../assets/ProfilePicture.jpg"), #656C74;
+        background-position: 0 0, right -200px top 10%, 0 0;
+        /* background-size: 40%; */
+        background-size: auto, 900px 1100px, auto;	
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
+
+    .home p {
+        font-size: 30px;
+        font-weight: 400;
+        color: var(--color-text-inverse);
+    }
+
+    /* About Section */
+
+    .about .tile .tile-title {
+        font-size: 20px;
+        /* font-weight: 700; */
+    }
+    
+    .about .tile .tile-description {
+        display: none;
+        font-size: 20px;
+        transition: all 0.5s ease-in;
+    }
+
+    /* Skills Section */
+    .skills .skillItem {
+        height: 100px;
+    }
+
+    .skills h2 {
+        font-size: 20px;
+    }
+
+    /* Footer */
+    
+    footer .footer-left a {
+        height: 32px;
+        transition: all 0.3s ease-in;
+        padding: 20px 10px 20px 0;
+        /* word-spacing: 20px; */
+    }
+
+    footer .footer-right a {
+        height: 32px;
+        transition: all 0.3s ease-in;
+        padding: 20px 0 20px 10px;
+    }
+}
+
+/* ------ Small Devices (Lower than 768px) ----- */
+@media (max-width: 767.98px) {
+
+    /* Home Section */
+    .home h1 {
+        font-size: 80px;
+    }
+
+    .home p {
+        font-size: 20px;
+    }
+
+    /* About Section */
+        
+    .about .tile .tile-description {
+        display: none;
+        font-size: 18px;
+        transition: all 0.5s ease-in;
+    }
+
+    /* Skills Section */
+    
+    .skills .skillItem {
+        height: 100px;
+        margin-bottom: 30px;
+    }
+
+    .skills h2 {
+        /* text-align: center; */
+        font-size: 15px;
+    }
+}
+
+/* ------ X-Small Devices (Lower than 567px) ----- */
+@media (max-width: 566.98px) {
+
+    /* Hero Section */
+    .home {
+        height: 700px;
+    }
+    
+    /* All Heading Style */
+    .heading {
+        padding: 20px 15px;
+    }
+
+    /* About Section */
+    .about .about-role-title {
+        font-size: 30px;
+    }
+
+    /* Work Experience Section */
+        
+    .workExpDetail {
+        margin: 20px 0;
+    }
+
+    /* Personal Projects Section */
+    .projects .projectThumbnail {
+        height: 150px;
+        width: 300px;
+    }
+
+        
+    .projects .projectTechList {
+        line-height: 30px;
+    }
+
+    .projects .projectTechList .projectTech {
+        font-size: 15px;
+    }
+
+    /* Message Section */
+    
+    .message .messageCard {
+        width: 90%;
+        box-shadow: 5px 5px 0px 10px rgba(0, 0, 0, 0.1);
+        /* background-color: var(--color-secondary);
+        color: var(--color-text-inverse); */
+        border-radius: 10px;
+        padding: 30px;
+    }
+    
+    /* Footer Section */
+        
+    footer .footer-title {
+        font-size: 18px;
+    }
+
+}
