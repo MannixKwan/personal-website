@@ -34,7 +34,7 @@ app.post('/message',(req,res) => {
         from: req.body.email,
         to: process.env.toEmailUser,
         subject: `Message from ${req.body.name} - Personal Website`,
-        text: req.body.messageDetail,
+        text: `${req.body.messageDetail} from ${req.body.email}`,
     };
     transporter.sendMail(mailData, (error,info) => {
         if (error) {
