@@ -19,9 +19,6 @@ const transporter = nodemailer.createTransport({
     secure: true
 });
 
-console.log(process.env.emailUser)
-console.log(process.env.emailPass)
-
 app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static('public'));
