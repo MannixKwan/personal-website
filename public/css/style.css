@@ -619,6 +619,19 @@ body {
 	resize: none;
 }
 
+.message .message-form-loading {
+	display: none;
+}
+
+.message .message-form-submitted {
+	display: none;
+}
+
+.message .message-error {
+	display: none;
+	color: var(--color-primary);
+}
+
 .messageImage {
 	height: 90%;
 	width: 90%;

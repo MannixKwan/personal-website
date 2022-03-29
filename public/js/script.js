@@ -117,17 +117,19 @@ $(document).ready(function() {
     $('.currentDuration').html(timeDiff);
 
     // Form Validation
-    $("[data-toggle=tooltip").tooltip();
-
-    $('.needs-validation').each(function () {
-        $(this).submit(function(e) {
-            if (!this.checkValidity()) {
-                e.preventDefault();
-                e.stopPropagation();
-            }
-            $(this).addClass('was-validated');
+    (function() {
+        'use strict'
+        $('.needs-validation').each(function () {
+            $(this).submit(function(e) {
+                if (!this.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                $(this).addClass('was-validated');
+            })
         })
-    })
+    })()
+
 
     // Navbar Side Menu Display
     $('.cust-navbar .cust-navbar-main .cust-navbar-icon').click(function() {
@@ -150,4 +152,69 @@ $(document).ready(function() {
             $('.cust-navbar .cust-navbar-icon .cust-navbar-icon-close').hide();
         }
     })
+
+    // Message Form Submission
+    $('#messageForm').submit(function(event) {
+
+        if (this.checkValidity()) {
+
+            event.preventDefault();
+
+            // Parsing Data
+            const formData = new FormData(this);
+    
+            const plainFormData = Object.fromEntries(formData.entries());
+            const formDataJsonString = JSON.stringify(plainFormData);
+    
+            console.log(formDataJsonString);
+    
+            // Reset Icons and Error Message
+            $('.message-form-submitted').hide();
+            $('.message-error').hide();
+    
+            // Call API
+            postMessage('/message',formDataJsonString)
+                .then(response => {
+                    if (response.success) {
+                        messageStopLoading();
+                        messageSuccess();
+                        $(this).trigger('reset');
+                        $(this).removeClass('was-validated');
+                    } else {
+                        messageStopLoading();
+                        messageError();
+                    }
+                })
+        }
+    })
+
+    async function postMessage(url = '', data = {}) {
+        messageLoading()
+        const response = await fetch (url, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: data
+        });
+        return response.json();
+    }
+
+    function messageLoading () {
+        $('.message-form-loading').css('display','inline-block');
+    }
+
+    function messageStopLoading () {
+        $('.message-form-loading').hide();
+    }
+
+    function messageSuccess () {
+        $('.message-form-submitted').show();
+    }
+
+    function messageError () {
+        $('.message-error').show();
+    }
+
 })

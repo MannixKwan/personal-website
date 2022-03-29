@@ -376,7 +376,7 @@
             <div class="row">
                 <div class="col-12 col-lg-7 col-xl-6 d-flex justify-content-center justify-content-sm-start align-items-center">
                     <div class="messageCard">
-                        <form action="/message" method="POST" class="needs-validation" novalidate>
+                        <form action="" method="POST" id="messageForm" class="needs-validation" novalidate>
                             <div class="mb-3 row">
                                 <label for="name" class="col-12 col-sm-3 col-form-label">Name</label>
                                 <div class="col-12 col-sm-9 position-relative">
@@ -413,7 +413,15 @@
                             <div class="mb-3 row">
                                 <div class="col-12 col-sm-3"></div>
                                 <div class="col-12 col-sm-9 text-center">
-                                    <button class="main-button" type="submit">Send</button>
+                                    <button class="main-button" type="submit">Send
+                                        <i class="message-form-loading fa-solid fa-circle-notch fa-spin"></i>
+                                        <i class="message-form-submitted fa-solid fa-check"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="message-error col-12 text-center">
+                                    Sorry, message cannot be sent. Please try again later.
                                 </div>
                             </div>
                             <!-- <div class="row">

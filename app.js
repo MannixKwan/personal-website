@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
     secure: true
 });
 
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
 
 app.use(express.static('public'));
 
@@ -39,10 +39,21 @@ app.post('/message',(req,res) => {
     };
     transporter.sendMail(mailData, (error,info) => {
         if (error) {
-            return console.log(error);
+            console.log(error);
+            res.status(500).send({
+                status: 500,
+                success: false,
+                message: error.message
+            })
+        } else {
+            console.log({message:"Mail Send", message_id: info.messageId});
+            res.status(200).send({
+                status: 200,
+                success: true,
+                message: 'Successfully messaged',
+                data: req.body
+            });
         }
-        console.log({message:"Mail Send", message_id: info.messageId})
-        res.status(200).redirect('back');
     })
 })
 
