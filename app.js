@@ -6,7 +6,10 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
+
+
+const {validateMessage} = require('./middleware.js');
 
 // Create Transporter Object
 const transporter = nodemailer.createTransport({
@@ -29,7 +32,7 @@ app.get('/',(req,res) => {
     res.sendFile(path.join(__dirname+'/index.html'));
 })
 
-app.post('/message',(req,res) => {
+app.post('/message',validateMessage,(req,res) => {
 
     const mailData = {
         from: req.body.email,

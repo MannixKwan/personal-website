@@ -13,9 +13,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "joi": "^17.6.0",
     "moment": "^2.29.1",
     "nodemailer": "^6.7.3",
     "normalize.css": "^8.0.1",
+    "sanitize-html": "^2.7.0",
     "wow.js": "^1.2.2"
   },
   "devDependencies": {

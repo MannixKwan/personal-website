@@ -380,7 +380,14 @@
                             <div class="mb-3 row">
                                 <label for="name" class="col-12 col-sm-3 col-form-label">Name</label>
                                 <div class="col-12 col-sm-9 position-relative">
-                                    <input name="name" type="name" class="form-control" id="name" required>
+                                    <input 
+                                        name="name" 
+                                        type="name" 
+                                        class="form-control" 
+                                        id="name" 
+                                        minlenght="2"
+                                        maxlenght="100"
+                                        required>
                                     <div class="invalid-tooltip">
                                         Please enter your name
                                     </div>
@@ -389,7 +396,14 @@
                             <div class="mb-3 row">
                                 <label for="email" class="col-12 col-sm-3 col-form-label">Email</label>
                                 <div class="col-12 col-sm-9 position-relative">
-                                    <input name="email" type="email" class="form-control" id="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                                    <input 
+                                        name="email" 
+                                        type="email" 
+                                        class="form-control" 
+                                        id="email" 
+                                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                                        maxlength="200"
+                                        required>
                                     <div class="invalid-tooltip">
                                         Please enter a valid email
                                     </div>
@@ -398,13 +412,27 @@
                             <div class="mb-3 row">
                                 <label for="phone" class="col-12 col-sm-3 col-form-label">Phone No.</label>
                                 <div class="col-12 col-sm-9 position-relative">
-                                    <input name="phone" type="phone" class="form-control" id="phone">
+                                    <input 
+                                        name="phone" 
+                                        type="phone" 
+                                        class="form-control" 
+                                        id="phone"
+                                        pattern="[0-9 +-]*"
+                                        minlength="6"
+                                        maxlength="50">
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="messageDetail" class="col-12 col-sm-3 col-form-label">Message</label>
                                 <div class="col-12 col-sm-9 position-relative">
-                                    <textarea name="messageDetail" id="messageDetail" cols="30" rows="5" class="form-control messageDetail" required></textarea>
+                                    <textarea 
+                                        name="messageDetail" 
+                                        id="messageDetail" 
+                                        cols="30" 
+                                        rows="5" 
+                                        class="form-control messageDetail" 
+                                        maxlength="1000"
+                                        required></textarea>
                                     <div class="invalid-tooltip">
                                         Please enter something
                                     </div>
