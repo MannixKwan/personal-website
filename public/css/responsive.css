@@ -10,7 +10,7 @@
         padding: 300px 0;
         display: flex;
         /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/ProfilePicture2.jpeg'); */
-        background: url("../assets/ProfilePicture.jpg"), #656C74;
+        background: url("../assets/ProfilePicture.png"), #656C74;
         background-position: 100% 10%;
         /* background-size: 40%; */
         background-size: 900px 1100px;	
@@ -68,7 +68,7 @@
         padding: 300px 0;
         display: flex;
         /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/ProfilePicture2.jpeg'); */
-        background: url("../assets/ProfilePicture.jpg"), #656C74;
+        background: url("../assets/ProfilePicture.png"), #656C74;
         background-position: right -200px top 10%;
         /* background-size: 40%; */
         background-size: 900px 1100px;	
@@ -203,7 +203,7 @@
         padding: 300px 0;
         display: flex;
         /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/ProfilePicture2.jpeg'); */
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../assets/ProfilePicture.jpg"), #656C74;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../assets/ProfilePicture.png"), #656C74;
         background-position: 0 0, right -200px top 10%, 0 0;
         /* background-size: 40%; */
         background-size: auto, 900px 1100px, auto;	
