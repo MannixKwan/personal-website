@@ -112,7 +112,7 @@ $(document).ready(function() {
     })
 
     // Current Employment Calculation
-    let timeDiff = moment([2019,8,2]).fromNow(true);
+    let timeDiff = moment([2025,7,1]).fromNow(true);
 
     $('.currentDuration').html(timeDiff);
 

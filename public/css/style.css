@@ -493,11 +493,12 @@ body {
 }
 
 .skills .skillItem {
-	height: 200px;
+	min-height: 200px;
+	margin-bottom: 20px;
 }
 
 .skills .img-wrapper {
-	height: 70%;
+	height: 140px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -516,6 +517,25 @@ body {
 }
 
 .skills .skillItem:hover .skillIcon {
+	transform: scale(1.1);
+}
+
+.skills .ai-skill-icon {
+	width: 110px;
+	height: 110px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	font-size: 2.75rem;
+	color: var(--color-secondary);
+	background-color: rgba(255, 186, 8, 0.18);
+	border: 3px solid var(--color-primary);
+	border-radius: 50%;
+	transition: all 0.5s ease;
+}
+
+.skills .skillItem:hover .ai-skill-icon {
 	transform: scale(1.1);
 }
 
